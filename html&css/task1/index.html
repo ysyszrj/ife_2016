@@ -72,7 +72,7 @@
     <article>
         <h2>最后一篇文章</h2>
         <h3>二级标题</h3>
-        <p><span>文章作者</span><span>文章发表时间</span></p>
+        <p><span>文章作者 </span><span>文章发表时间 </span></p>
         <p>下面是一个表格</p>
             <!--table[border=1]-->
             <table border="1">
@@ -117,45 +117,48 @@
             </table>
     </article>
     <!--aside>h2{这里以后是侧边栏}+form>h3{侧边栏注册标题}+label[for=email]{邮箱地址}+input#email[type=text]+br-->
-<aside>
-    <h2>这里以后是侧边栏</h2>
-    <form action="">
-        <h3>侧边栏注册标题</h3>
-        <label for="email">邮箱地址</label><input type="text" id="email"><br>
-        <!--span{邮箱地址请按要求格式输入}+br-->
-        <span>邮箱地址请按要求格式输入</span><br>
-        <!--label[for=pswd]{密码}+input#pswd[type="password"]+br-->
-        <label for="pswd">密码</label><input type="password" id="pswd"><br>
-        <!--label[for=pswd2]{密码Again}+input#pswd2[type="password"]+br-->
-        <label for="pswd2">密码Again</label><input type="password" id="pswd2"><br>
-        <!--span{密码为6-16位的英文和数字}        -->
-        <span>密码为6-16位的英文和数字</span><br>
-        <!--span{性别}+(label[]+input[type=radio name=gender])*2-->
-        <span>性别: </span>
-        <label for="male">男</label><input type="radio" name="gender" id="male" value="male">
-        <label for="female">女</label><input type="radio" name="gender" id="female" value="female">
-        <!--span+(label[]+input[type=radio name=gender])*2-->
-        <!--label里面放select是一种很神奇的用法-->
-        <br>
-        <label for="city">城市</label>
-        <select id="city">
-            <option value="bj" selected="selected">北京</option>
-            <option value="" >demo</option>
-            <option value="" >demo</option>
-            <option value="" >demo</option>
-        </select>
-        <br>
-        <!--span{爱好: }+label*4>input[type=checkbox name="hobby"]-->
-        <span>爱好: </span>
-        <label for="">运动<input type="checkbox" name="hobby"></label>
-        <label for="">艺术<input type="checkbox" name="hobby"></label>
-        <label for="">科学<input type="checkbox" name="hobby"></label>
-        <br>
-        <label for="personal">个人描述</label>
-        <textarea placeholder="请描述你自己" name="personal" id="personal" cols="30" rows="10"></textarea>
-        <br>
-        <button type="submit">submit</button>
-    </form>
-</aside>
+    <aside>
+        <h2>这里以后是侧边栏</h2>
+        <form action="">
+            <h3>侧边栏注册标题</h3>
+            <label for="email">邮箱地址</label><input type="text" id="email"><br>
+            <!--span{邮箱地址请按要求格式输入}+br-->
+            <span>邮箱地址请按要求格式输入</span><br>
+            <!--label[for=pswd]{密码}+input#pswd[type="password"]+br-->
+            <label for="pswd">密码</label><input type="password" id="pswd"><br>
+            <!--label[for=pswd2]{密码Again}+input#pswd2[type="password"]+br-->
+            <label for="pswd2">密码Again</label><input type="password" id="pswd2"><br>
+            <!--span{密码为6-16位的英文和数字}        -->
+            <span>密码为6-16位的英文和数字</span><br>
+            <!--span{性别}+(label[]+input[type=radio name=gender])*2-->
+            <span>性别: </span>
+            <label for="male">男</label><input type="radio" name="gender" id="male" value="male">
+            <label for="female">女</label><input type="radio" name="gender" id="female" value="female">
+            <!--span+(label[]+input[type=radio name=gender])*2-->
+            <!--label里面放select是一种很神奇的用法-->
+            <br>
+            <label for="city">城市</label>
+            <select id="city">
+                <option value="bj" selected="selected">北京</option>
+                <option value="" >demo</option>
+                <option value="" >demo</option>
+                <option value="" >demo</option>
+            </select>
+            <br>
+            <!--span{爱好: }+label*4>input[type=checkbox name="hobby"]-->
+            <span>爱好: </span>
+            <input type="checkbox" name="hobby" id="sport"><label for="sport">运动 </label>
+            <input type="checkbox" name="hobby" id="art"><label for="art">艺术 </label>
+            <input type="checkbox" name="hobby" id="sci"><label for="sci">科学 </label>
+            <br>
+            <label for="personal">个人描述</label>
+            <textarea placeholder="请描述你自己" name="personal" id="personal" cols="30" rows="2"></textarea>
+            <br>
+            <button type="submit">submit</button>
+        </form>
+    </aside>
+    <footer>
+        <span>版权所有&copy;zrj</span>
+    </footer>
 </body>
 </html>
