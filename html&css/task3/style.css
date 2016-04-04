@@ -1,0 +1,50 @@
+body{
+    padding: 20px;
+    margin: 0;
+}
+body,img{
+    border: none;
+}
+*{
+    border: 1px solid #999;
+    border-collapse: collapse;
+}
+
+#container{
+    padding: 20px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+#team_intro {
+    background-color: white;
+    width: 160px;
+    float: left;
+    padding: 20px;
+}
+#team_name{
+    float: right;
+    display: inline-block;
+    border: none;
+}
+img{
+    height: 80px;
+    width:80px;
+}
+#person_intro img{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#team{
+    background-color: white;
+    margin-left: 220px;
+    margin-right: 140px;
+    width: auto;
+    padding: 20px;
+}
+#person_intro{
+    background-color: white;
+    float: right;
+    width: 80px;
+    padding: 10px 20px;
+}
