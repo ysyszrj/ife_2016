@@ -10,17 +10,26 @@ body,img{
     border-collapse: collapse;
 }
 
-#container{
+.container{
     padding: 20px;
     background-color: #eee;
+}
+#c1{
     overflow: hidden;
+    margin-bottom: 20px;
+}
+#c2{
+    position: relative;
 }
 
-#team_intro {
+.team_intro {
     background-color: white;
     width: 160px;
-    float: left;
     padding: 20px;
+}
+
+#l1{
+    float: left;
 }
 #team_name{
     float: right;
@@ -35,16 +44,31 @@ img{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-#team{
+.team{
     background-color: white;
-    margin-left: 220px;
-    margin-right: 140px;
     width: auto;
     padding: 20px;
 }
-#person_intro{
+#m1{
+    margin-left: 220px;
+    margin-right: 140px;
+}
+#m2{
+    position: absolute;
+    top: 20px;
+    right: 160px;
+    left: 240px;
+}
+.person_intro{
     background-color: white;
-    float: right;
     width: 80px;
     padding: 10px 20px;
+}
+#r1{
+    float: right;
+}
+#r2{
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }

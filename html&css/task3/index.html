@@ -6,28 +6,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <aside id="team_intro">
+    <div class="container" id="c1">
+        <aside class="team_intro" id="l1">
 
             <img src="" alt="">
-            <div id="team_name">团队名称</div>
+            <div id="team_name">青团萌</div>
 
         </aside>
-        <aside id="person_intro">
-
+        <aside class="person_intro" id="r1">
             <img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">
         </aside>
-        <article id="team">
+        <article class="team" id="m1">
             团队很可爱啊
 
-            在 chrome、firefox 及 IE8 以上的浏览器下可以设置块级元素的 display 为 table-cell，激活 vertical-align 属性，但注意 IE6、7 并不支持这个样式。
-
-            有一个有趣的现象就是当为元素（不论之前是什么类型元素，display:none 除外）设置以下 2 个句之一：
-            position : absolute
-            float : left 或 float
+            这个布局关于float的，子节点float：left,然后再右边的float:right; 然后再中间的正常文档流，解决父节点塌陷的问题由 overflow:hidden来解决。
         </article>
 
     </div>
 
+    <div class="container" id="c2">
+        <aside class="team_intro" id="l2">
+
+            <img src="" alt="">
+            <div id="team_name2">团队名称</div>
+
+        </aside>
+        <aside class="person_intro" id="r2">
+
+            <img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">
+        </aside>
+        <article class="team" id="m2">
+            团队很可爱啊
+
+           父节点设置为position:relative ,子节点position:absolute，就能针对父节点的位置定位。
+            但是好像无法解决高度塌陷问题
+        </article>
+
+    </div>
 </body>
 </html>
