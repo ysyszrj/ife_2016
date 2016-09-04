@@ -1,5 +1,9 @@
 # 任务五：零基础HTML及CSS编码（二）
 
+## features
+- 语义化标签
+- less模块化实现，仿照[bootstrap](https://github.com/twbs/bootstrap/blob/master/less/)的风格写样式
+
 ## 任务目的
 针对设计稿样式进行合理的HTML架构，包括以下但不限于：
 掌握常用HTML标签的含义、用法
