@@ -1,0 +1,128 @@
+@bg_color: #8dd0d6;
+@white: white;
+@header_height: 2.6rem;
+@font: "微软雅黑";
+
+h1 {
+  text-align: center;
+}
+
+.article {
+
+}
+
+body {
+  margin: 0;
+
+}
+
+header {
+  height: @header_height;
+  line-height: @header_height;
+  background-color: @bg_color;
+  color: white;
+  width: 100%;
+  //font-family: @font;
+  font-size: 1.3rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+    float: left;
+    position: absolute;
+  }
+  .header_title {
+    position: relative;
+    text-align: center;
+  }
+}
+
+nav {
+  @nav_li_num: 5;
+  ul {
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    display: flex;
+
+    li {
+      float: left;
+      width: 100% / @nav_li_num;
+    }
+
+    li:hover {
+      border-bottom: 1px #72b16a solid;
+    }
+  }
+}
+
+#display {
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  @label_num:5;
+  #labels{
+
+    width: 100%;
+    li{
+      width: 100% / @label_num;
+      float: left;
+      height: 3rem;
+    }
+
+  }
+}
+
+
+#columns{
+  //height: 3rem;
+  overflow: hidden;
+  @column_num:3;
+  img{
+    width: 100%;
+  }
+  .column{
+    float: left;
+    width: 100% / @column_num;
+  }
+}
+
+.module{
+  overflow: hidden;
+  img{
+    width: 30%;
+  }
+  @doc_height:3rem;
+  .docs{
+    float: right;
+    width: 70%;
+    .doc{
+      width: 50%;
+      float: left;
+      height: @doc_height;
+      line-height: @doc_height;
+    }
+  }
+}
+
+.articles{
+  overflow: hidden;
+  @article_img:30%;
+  img{
+    width: @article_img;
+    float: left;
+  }
+  .article{
+    width: 100% - @article_img;
+    float: left;
+  }
+}
+
+.article2{
+  img{
+    width: 100% / 3;
+  }
+}
