@@ -8,22 +8,21 @@
 - 博客风格
 - 表单
 
-[源码](html&css/task5)  [在线demo](http://ysyszrj.info/ife_2016/task5/)
+[【源码】](html&css/task5)  [【在线demo】](http://ysyszrj.info/ife_2016/task5/)
 
 ### task6
 http://ysyszrj.info/ife_2016/task6/
 - 像素固定布局
 - 伪类的应用
 
-[源码](htmml&css/task6)   [在线demo](http://ysyszrj.info/ife_2016/task6/)
+[【源码】](html&css/task6)   [【在线demo】](http://ysyszrj.info/ife_2016/task6/)
 
 ### 移动端页面布局
 - 移动端
 - 弹性布局
 
-[源码](html&css/task11)  [在线demo](http://ysyszrj.info/ife_2016/task6/)
+[【源码】](html&css/task11)  [【在线demo】](http://ysyszrj.info/ife_2016/task11/)
 
-### task6
 
 # 参考资料
  - mdn对于javascript的一些资料 
