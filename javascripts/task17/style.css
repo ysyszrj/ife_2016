@@ -1,0 +1,14 @@
+.aqi-chart-wrap{
+    height: 500px;
+    background-color: #8dd0d6;
+    margin: 30px;
+}
+.bar{
+    float: left;
+    background-color: #11456b;
+
+}
+
+fieldset{
+    border-radius: 1rem;
+}
