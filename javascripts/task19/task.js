@@ -9,11 +9,11 @@
  */
 function is_valid(value) {
     var pattern = /^\d+$/;
-    if(pattern.test(value)){
+    if (pattern.test(value)) {
         var num = Number(value);
-        if(num>=10&&num<=100){
+        if (num >= 10 && num <= 100) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -26,10 +26,10 @@ function is_valid(value) {
  */
 function input_valid(val) {
     var label_value = document.querySelector("#label_value")
-    if(is_valid(val)){
+    if (is_valid(val)) {
         label_value.innerText = "Right";
         return true;
-    }else{
+    } else {
         label_value.innerText = "Not True";
         return false;
     }
@@ -39,12 +39,21 @@ function input_valid(val) {
  *
  */
 function num_count(num) {
-    if(num>60){
+    if (num > 60) {
         alert("Too much number!!");
         return false;
-    }else{
+    } else {
         return true;
     }
+}
+
+
+function get_child_nodes(value) {
+    var child = document.createElement("div");
+    child.innerText = value;
+    child.style.height = value+"px";
+    child.style.marginTop = (100-value)+"px";
+    return child;
 }
 
 
@@ -63,21 +72,20 @@ function init() {
         if (e.target != e.currentTarget) {
             var index = [].indexOf.call(queue.children, e.target);
             queue.removeChild(e.target);
-            list.splice(index,1);
-        };
+            list.splice(index, 1);
+        }
+
     });
 
-    input.addEventListener("change",function (e) {
+    input.addEventListener("change", function (e) {
         var val = e.target.value;
         input_valid(val);
     });
 
     left_in.addEventListener("click", function () {
-        var child = document.createElement("div");
         var value = input.value;
-
-        if (input_valid(value)&&num_count(list.length)) {
-            child.innerText = value;
+        var child=get_child_nodes(value);
+        if (input_valid(value) && num_count(list.length)) {
             queue.insertBefore(child, queue.firstChild);
         }
         list.unshift(value);
@@ -85,10 +93,9 @@ function init() {
 
     var right_in = document.querySelector("#right_in");
     right_in.addEventListener("click", function () {
-        var child = document.createElement("div");
         var value = input.value;
-        if (input_valid(value)&&num_count(list.length)) {
-            child.innerText = value;
+        var child=get_child_nodes(value);
+        if (input_valid(value) && num_count(list.length)) {
             queue.insertBefore(child, queue.firstChild);
         }
         list.push(value);
