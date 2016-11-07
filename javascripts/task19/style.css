@@ -1,0 +1,7 @@
+#queue div{
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    float: left;
+    margin-left: 5px;
+}
