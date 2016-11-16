@@ -29,7 +29,7 @@ function init() {
 
     left_in.addEventListener("click", function () {
         var child = document.createElement("div");
-        value = input.value;
+        var value = input.value;
         if (is_valid(value)) {
             child.innerText = value;
             queue.insertBefore(child, queue.firstChild);
@@ -41,10 +41,10 @@ function init() {
     var right_in = document.querySelector("#right_in");
     right_in.addEventListener("click", function () {
         var child = document.createElement("div");
-        value = input.value;
+        var value = input.value;
         if (is_valid(value)) {
             child.innerText = value;
-            queue.insertBefore(child, queue.firstChild);
+            queue.appendChild(child);
         } else {
             alert("input number is not right");
         }
