@@ -18,7 +18,7 @@ function is_valid(value) {
  * @returns {Array}
  */
 function convert(text) {
-    return text.split(/[\s,\n、，\t]/g);
+    return text.trim().split(/[\s,\n、，\t]/g);
 }
 
 
@@ -30,6 +30,7 @@ function init() {
     var queue = document.querySelector("#queue");
     var left_in = document.querySelector("#left_in");
     var input = document.querySelector("#value1");
+    var key_word = document.querySelector("#key_word");
 
     queue.addEventListener("click", function (e) {
         if (e.target != e.currentTarget) {
@@ -80,5 +81,15 @@ function init() {
         queue.removeChild(queue.lastChild);
     });
 
+    var query_div = document.querySelector("#query");
+    query_div.addEventListener("click",function () {
+        var word = key_word.value.trim();
+        var child_nodes = Array.prototype.concat.apply([],queue.children);
+        // var child_nodes = Array.prototype.slice(queue.children,0);
+        for(var i=0,nn = child_nodes.length;i<nn;i++){
+            var child = child_nodes[i];
+            child.innerHTML = child.innerHTML.replace(word,"<span>"+word+"</span>");
+        }
+    })
 }
 init();
