@@ -3,6 +3,7 @@
     background-color: red;
     float: left;
     margin-left: 5px;
+    transition: height 0.5s;;
 }
 
 #queue{

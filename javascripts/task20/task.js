@@ -2,13 +2,15 @@
  * Created by ysysz on 2016/11/4.
  */
 
+var data = [];
+
 /**
  * 验证是否为数字
  * @param value 被验证的值
  * @returns {boolean}
  */
 function is_valid(value) {
-    var pattern = /^\d+$/;
+    var pattern = /^[\d\w\W]+$/;
     return pattern.test(value);
 }
 
@@ -42,6 +44,7 @@ function init() {
 
         var value = input.value;
         var new_data = convert(value);
+        data = new_data.concat(data);
         for (var i=new_data.length-1;i>=0;i--) {
             var item = new_data[i];
             if (is_valid(item)) {
@@ -59,6 +62,7 @@ function init() {
     right_in.addEventListener("click", function () {
         var value = input.value;
         var new_data = convert(value);
+        data = data.concat(new_data);
         for (var i=0,nn = new_data.length;i<nn;i++) {
             var item = new_data[i];
             if (is_valid(item)) {
@@ -74,22 +78,33 @@ function init() {
     var left_out = document.querySelector("#left_out");
     left_out.addEventListener("click", function () {
         queue.removeChild(queue.firstChild);
+        data.shift();
     });
 
     var right_out = document.querySelector("#right_out");
     right_out.addEventListener("click", function () {
         queue.removeChild(queue.lastChild);
+        data.pop();
     });
 
     var query_div = document.querySelector("#query");
     query_div.addEventListener("click",function () {
         var word = key_word.value.trim();
-        var child_nodes = Array.prototype.concat.apply([],queue.children);
-        // var child_nodes = Array.prototype.slice(queue.children,0);
-        for(var i=0,nn = child_nodes.length;i<nn;i++){
-            var child = child_nodes[i];
-            child.innerHTML = child.innerHTML.replace(word,"<span>"+word+"</span>");
-        }
+        render_div(word);
     })
 }
+
+function render_div(word) {
+
+    var queue = document.querySelector("#queue");
+    queue.innerHTML = "";
+    var inner_str = "";
+    for(var i=0;i<data.length;i++){
+        if(word){
+            inner_str += "<div>"+data[i].replace(word,"<span>"+word+"</span>")+"</div>";
+        }
+    }
+    queue.innerHTML = inner_str;
+}
+
 init();

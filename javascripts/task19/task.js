@@ -78,7 +78,7 @@ function sort(list, queue) {
     }
 
 
-    var duration = 500;
+    var duration = 1000;
 
     function quick_sort(start, end) {
         //渲染颜色
